@@ -1,0 +1,4 @@
+classification ID 순서 일치: True / 예측 일치: True
+실패 확률 일치: True
+regression ID 순서 일치: True / 예측 일치: True
+모델을 다시 학습하지 않았습니다. test도 사용하지 않았습니다.

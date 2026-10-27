@@ -1,0 +1,114 @@
+{
+  "classification": "Tree",
+  "regression": "KNN15",
+  "rule": "classification: max train-CV mean F1; regression: min train-CV mean RMSE; ties: listed order",
+  "classification_candidates": [
+    "Dummy",
+    "Logistic",
+    "KNN3",
+    "Tree",
+    "Forest",
+    "XGB"
+  ],
+  "regression_candidates": [
+    "Dummy",
+    "Linear",
+    "KNN15",
+    "Tree",
+    "Forest",
+    "XGB"
+  ],
+  "features": [
+    "input_chars",
+    "allowed_tools",
+    "task_type",
+    "priority"
+  ],
+  "seed": 42,
+  "folds": 5,
+  "test_evaluated": false,
+  "model_parameters": {
+    "Dummy": {
+      "random_state": null,
+      "strategy": "most_frequent"
+    },
+    "Logistic": {
+      "C": 1,
+      "max_iter": 1000,
+      "n_jobs": null,
+      "random_state": null
+    },
+    "KNN3": {
+      "n_jobs": null,
+      "n_neighbors": 3
+    },
+    "Tree": {
+      "max_depth": 3,
+      "max_features": null,
+      "min_samples_leaf": 3,
+      "random_state": 42
+    },
+    "Forest": {
+      "max_depth": 4,
+      "max_features": "sqrt",
+      "min_samples_leaf": 2,
+      "n_estimators": 100,
+      "n_jobs": 1,
+      "random_state": 42
+    },
+    "XGB": {
+      "objective": "binary:logistic",
+      "colsample_bytree": 1.0,
+      "device": "cpu",
+      "eval_metric": "logloss",
+      "learning_rate": 0.05,
+      "max_depth": 2,
+      "n_estimators": 80,
+      "n_jobs": 1,
+      "random_state": 42,
+      "reg_lambda": 1.0,
+      "subsample": 0.8,
+      "tree_method": "hist"
+    }
+  },
+  "regression_model_parameters": {
+    "Dummy": {
+      "strategy": "mean"
+    },
+    "Linear": {
+      "n_jobs": null
+    },
+    "KNN15": {
+      "n_jobs": null,
+      "n_neighbors": 15
+    },
+    "Tree": {
+      "max_depth": 3,
+      "max_features": null,
+      "min_samples_leaf": 3,
+      "random_state": 42
+    },
+    "Forest": {
+      "max_depth": 4,
+      "max_features": 1.0,
+      "min_samples_leaf": 2,
+      "n_estimators": 100,
+      "n_jobs": 1,
+      "random_state": 42
+    },
+    "XGB": {
+      "objective": "reg:squarederror",
+      "colsample_bytree": 1.0,
+      "device": "cpu",
+      "eval_metric": "rmse",
+      "learning_rate": 0.05,
+      "max_depth": 2,
+      "n_estimators": 80,
+      "n_jobs": 1,
+      "random_state": 42,
+      "reg_lambda": 1.0,
+      "subsample": 0.8,
+      "tree_method": "hist"
+    }
+  }
+}

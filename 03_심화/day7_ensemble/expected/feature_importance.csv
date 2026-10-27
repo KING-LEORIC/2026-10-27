@@ -1,0 +1,13 @@
+﻿feature,importance,model,method,data,repeat_std
+num__input_chars,0.5642561704363525,Forest,MDI,train60,
+num__allowed_tools,0.16695992834839143,Forest,MDI,train60,
+cat__task_type_qa,0.04682965690389289,Forest,MDI,train60,
+cat__task_type_research,0.04055336036469088,Forest,MDI,train60,
+cat__task_type_summary,0.042773957718423815,Forest,MDI,train60,
+cat__priority_high,0.039793770166542314,Forest,MDI,train60,
+cat__priority_low,0.045077508700060526,Forest,MDI,train60,
+cat__priority_normal,0.05375564736164577,Forest,MDI,train60,
+input_chars,0.06777777777777776,Forest,permutation_F1,valid20,0.1361009066469561
+allowed_tools,0.05419191919191918,Forest,permutation_F1,valid20,0.11854860848709747
+task_type,0.17365079365079364,Forest,permutation_F1,valid20,0.0990155625780769
+priority,-0.02055555555555556,Forest,permutation_F1,valid20,0.1801242712307804
